@@ -1,0 +1,18 @@
+@import "@fontsource/judson/400.css"; 
+@import "@fontsource/judson/700.css"; 
+@import '@fontsource/italianno/400.css';
+
+@import "tailwindcss";
+
+.font-italianno {
+  font-family: 'Italianno', cursive;
+}
+
+.font-judson {
+  font-family: 'Judson', serif;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
