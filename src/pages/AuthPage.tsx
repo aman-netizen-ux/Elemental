@@ -7,7 +7,7 @@ const AuthPage = () => {
   const [isLogin, setIsLogin] = useState(true);
 
   return (
-    <div className="relative w-full min-h-screen h-fit bg-black flex items-center justify-center tracking-tighter p-5 gap-5">
+    <div className="relative w-full max-w-fit min-h-screen h-fit bg-black flex items-center justify-center tracking-tighter p-5 gap-5">
 
       <GradientBlock />
       <div className='w-full h-full flex justify-center items-center'>
