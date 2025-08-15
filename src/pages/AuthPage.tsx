@@ -7,13 +7,14 @@ const AuthPage = () => {
   const [isLogin, setIsLogin] = useState(true);
 
   return (
-    <div className="w-full h-screen bg-black flex overflow-y-auto tracking-tighter">
+    <div className="relative w-full min-h-screen h-fit bg-black flex items-center justify-center tracking-tighter p-5 gap-5">
 
       <GradientBlock />
-      <div className='w-[35%] flex justify-center items-center'>
+      <div className='w-full h-full flex justify-center items-center'>
         <RegisterForm />
       </div>
 
+      <GradienceBar />
 
     </div>
   );
@@ -23,7 +24,8 @@ export default AuthPage;
 
 function GradientBlock() {
   return(
-        <div className='w-[535px] h-[620px] bg-gradient-to-b from-[#FF0000] via-[#FF4201] to-[#FF8401] rounded-2xl flex flex-col justify-center items-center bg-white'>
+        <div className=" w-[57%] h-full flex items-center justify-start">
+          <div className='w-[668px] h-[753px] bg-gradient-to-b from-[#FF0000] via-[#FF4201] to-[#FF8401] rounded-2xl flex flex-col justify-center items-center bg-white'>
         <p className="font-judson text-6xl text-white">Elemental</p>
         <p className="font-italianno text-4xl text-white">way to creativity</p>
         <button
@@ -32,6 +34,13 @@ function GradientBlock() {
         ><span className='font-semibold'>Register your account
           </span> <ArrowRight /> </button>
       </div>
+        </div>
+  )
+}
+
+function GradienceBar() {
+  return(
+    <div className="absolute z-999 -top-3 right-8 w-10 h-50 bg-white rotate-145 blur-3xl" />
   )
 }
 

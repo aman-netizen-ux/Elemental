@@ -12,11 +12,11 @@ const RegisterForm = () => {
     }
 
     return (
-        <form onSubmit={handleRegister} className="flex flex-col items-center justify-center h-full w-full">
+        <form onSubmit={handleRegister} className="flex flex-col items-center justify-center">
             <h1 className='text-white text-xl font-inter'> Sign up your account</h1>
             <p className="text-[#B9B6B6] text-xs font-inter py-2"> Enter required information to create your account </p>
 
-            <div className='w-[20rem] h-[15rem] mt-2 space-y-2'>
+            <div className='w-[19.5rem] h-[15rem] space-y-2'>
                 <div className=' flex gap-4 items-center justify-center '>
                 <InputField
                     label="First Name"
@@ -34,7 +34,7 @@ const RegisterForm = () => {
                     onChange={(e) => setName(e.target.value)}
                 />
             </div>
-            <div className='flex flex-col space-y-2'>
+            <div className='flex flex-col gap-2'>
                 <InputField
                 type="email"
                 placeholder='eg: jamesmorgan@gmail.com'
@@ -51,13 +51,42 @@ const RegisterForm = () => {
                 onChange={(e) => setPassword(e.target.value)}
             />
 
-            </div>
-            </div>
-            <p className='font-inter text-[13px] mt-10 text-[#C9BEBE] '>Already have an account? Log in</p>
+            <button className='bg-white rounded-md p-1.5 text-sm font-semibold mt-2'>
+                Register
+            </button>
 
-            {/* <button type = "submit" className="bg-green-600 text-white py-2 rounded hover:bg-green-700"> Register</button> */}
+            </div>
+            </div>
+            <p className='font-inter text-[13px] mt-10 text-[#C9BEBE] font-semibold'>Already have an account? <span className='text-white'>Log in</span></p>
+            
+
+            <hr className='text-[#1F1F1F] w-full mt-5' />
+
+
+
+            <div className="flex items-center justify-center gap-3 mt-4">
+                <Button 
+                    logo={"./google-icon.svg"}
+                    content="Google"
+                />
+                <Button
+                    logo={`./github-icon.svg`}
+                    content="Github"
+                />
+            </div>
+
         </form>
     );
+}
+
+
+function Button({logo, content}) {
+    return(
+       <button className='border border-[#1f1f1f] rounded-lg px-6 py-2 flex items-center justify-center gap-2 tracking-normal'>
+                <img src={logo} className='flex items-center justify-center w-3.5 h-3.5' />
+                <p className="font-inter text-sm text-white">{content}</p>
+        </button>
+    )
 }
 
 export default RegisterForm;
